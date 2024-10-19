@@ -77,11 +77,16 @@
       headers: {
         Authorization: "KakaoAK 54989cb503edc730f118bdb3712e4f79",
       },
-      data: { query: query, size: size, page: page },
+      data: { query, size, page },
       success: function (data) {
         console.log(data);
+        console.log($("#temp_list").html())
+
         const temp = Handlebars.compile($("#temp_list").html());
         $("#div_list").html(temp(data));
+
+        console.log("temp", temp);
+        console.log(temp(data));
 
         const last = Math.ceil(data.meta.pageable_count/size);
         $("#page").html(`${page}/${last}`);

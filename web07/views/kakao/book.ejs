@@ -82,7 +82,7 @@
         type:"get",
         url:"https://dapi.kakao.com/v3/search/book?target=title",
         //url:`https://dapi.kakao.com/v3/search/book?target=title&size=${size}&query=${query}&page=${page}`,
-        data:{query:query, size:size,page:page},
+        data:{query, size, page},
         headers:{"Authorization": "KakaoAK 54b6688221dead45827042df7e297c2d"},
         success:function(data){
           console.log(data);
