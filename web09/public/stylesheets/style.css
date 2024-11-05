@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Stylish&display=swap');
+* {
+  font-family: "Stylish", serif;
+  font-weight: 400;
+  font-style: normal;  
+}
+
+.ellipsis {
+  /* 넘칠 때 안 보이게 하기 */
+  overflow: hidden;
+  /* 말줄임표 */
+  text-overflow: ellipsis;
+  /*상자 가로정렬*/
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
